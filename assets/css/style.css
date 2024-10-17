@@ -47,7 +47,9 @@ body {
 }
 
 .flex-center{
-    justify-content: center;   
+    justify-content: center;  
+    align-items: center; 
+    height: 100svh;
 }
 
 

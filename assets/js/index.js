@@ -80,7 +80,7 @@ function toggleConnection(isOnline) {
 if ('getBattery' in navigator) {
     navigator.getBattery().then(function(battery) {
         levelObj.innerText = `${(battery.level * 100).toFixed(1)}%`;
-        statusObj.innerText = battery.charging ? "charging" : "charged";
+        statusObj.innerText = battery.charging ? "charging" : "idle";
     });
 }
 
@@ -109,4 +109,3 @@ listen('online', window, () => {
 listen('offline', window, () => {
     toggleConnection(false);
 });
-
