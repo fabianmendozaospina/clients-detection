@@ -41,7 +41,6 @@ function getOS() {
         os = "iOS";
     }
 
-    console.log("os: ", os);
     osObj.innerText = os;
 }
 
@@ -56,7 +55,7 @@ function getBrowser() {
     else if (/Safari/.test(userAgent) && !/Chrome/.test(userAgent)) browser = "Safari";
     else if (/MSIE|Trident/.test(userAgent)) browser = "Internet Explorer";
     else if (/Edg/.test(userAgent)) browser = "Edge";
-    console.log("userAgent", userAgent);
+    
     browserObj.innerText = browser;
 }
 
@@ -79,7 +78,9 @@ function toggleConnection(isOnline) {
 
 if ('getBattery' in navigator) {
     navigator.getBattery().then(function(battery) {
-        levelObj.innerText = `${(battery.level * 100).toFixed(1)}%`;
+        let level = (battery.level * 100);
+        level = !Number.isInteger(level) ? level.toFixed(1) : level;
+        levelObj.innerText = `${level}%`;
         statusObj.innerText = battery.charging ? "charging" : "idle";
     });
 }

@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+/*--------------------------------------*/
+/*              Basic rules             */
+/*--------------------------------------*/
+
 :root {
     --app-border-radius: 6px;
     --app-color: #333045;
@@ -10,31 +14,13 @@
     margin-inline: auto;
 }
  
-/*--------------------------------------*/
-/*                 Body                 */
-/*--------------------------------------*/
- 
 body {
     background-color: #181721;
 }
- 
-.dashboard {
-    border-radius: var(--app-border-radius);  
-
-    div {
-        width: 280px;
-        border-radius: var(--app-border-radius);
-        text-align: center;
- 
-        p {
-            font-size: 14px;
-        }
-    }    
-}
 
  
 /*--------------------------------------*/
-/*                 Flexbox              */
+/*               Flexbox                */
 /*--------------------------------------*/
 
 .flex {
@@ -56,6 +42,20 @@ body {
 /*--------------------------------------*/
 /*               Dashboard              */
 /*--------------------------------------*/
+
+.dashboard {
+    border-radius: var(--app-border-radius);  
+
+    div {
+        width: 280px;
+        border-radius: var(--app-border-radius);
+        text-align: center;
+ 
+        p {
+            font-size: 14px;
+        }
+    }    
+}
 
 .setting {
     height: 115px;
