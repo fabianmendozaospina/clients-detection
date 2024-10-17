@@ -7,7 +7,7 @@
 
 .container {
     width: min(100% - 32px, 1080px);
-    margin: auto;
+    margin-inline: auto;
 }
  
 /*--------------------------------------*/
@@ -15,17 +15,11 @@
 /*--------------------------------------*/
  
 body {
-    background-color: #181721;;
-}
- 
-main {
-    /* margin-top: 10px; */
-    /* padding-bottom: 60px 0; */
+    background-color: #181721;
 }
  
 .dashboard {
-    /* padding: 10px; */
-    border-radius: var(--app-border-radius);
+    border-radius: var(--app-border-radius);  
 
     div {
         width: 280px;
@@ -37,12 +31,12 @@ main {
         }
     }    
 }
- 
+
  
 /*--------------------------------------*/
 /*                 Flexbox              */
 /*--------------------------------------*/
- 
+
 .flex {
     display: flex;
     gap: 20px;
@@ -63,7 +57,6 @@ main {
 
 .setting {
     height: 115px;
-    align-items: center;
     font-weight: 400;
     color: #fff;
     border: 1px solid var(--app-color);
@@ -100,8 +93,8 @@ main {
     }    
 }
  
-.connection {
-    background-color: #04b931;
+.connection-color {
+    background-color: var(--app-color);
     height: 40px;
     color:#fff;
     
@@ -109,5 +102,3 @@ main {
        line-height: 40px; 
     }
 }
- 
- 
